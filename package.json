@@ -1,7 +1,7 @@
 {
   "name": "goit-js-hw-09",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://szymonoponczewski.github.io/goit-js-hw-09/index.html",
   "homepage": "https://szymonoponczewski.github.io/goit-js-hw-09/",
   "scripts": {
     "start": "parcel src/index.html",
