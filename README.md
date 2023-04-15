@@ -1,2 +1,2 @@
-# goit-js-hw-08
-https://szymonoponczewski.github.io/goit-js-hw-08/index.html
+# goit-js-hw-09
+https://szymonoponczewski.github.io/goit-js-hw-09/index.html
