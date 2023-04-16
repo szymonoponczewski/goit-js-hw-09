@@ -1,3 +1,4 @@
+import Notiflix from "notiflix";
 import flatpickr from "flatpickr";
 
 import "flatpickr/dist/flatpickr.min.css";
@@ -11,6 +12,9 @@ const minutesValue = document.querySelector("span[data-minutes]");
 const secondsValue = document.querySelector("span[data-seconds]");
 const timerEl = document.querySelector(".timer");
 
+let pickedDate = 0;
+let timerId = null;
+
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -20,15 +24,13 @@ const options = {
     pickedDate = selectedDates[0].getTime();
 
     if (pickedDate < options.defaultDate) {
-      window.alert("Please choose a date in the future");
+      Notiflix.Notify.failure("Please choose a date in the future");
       startBtn.setAttribute("disabled", "true");
     } else {
       startBtn.removeAttribute("disabled");
     }
   },
 };
-
-let timerId = null;
 
 flatpickr(inputEl, options);
 
@@ -51,7 +53,7 @@ function updateCountdown() {
     minutesValue.textContent = "00";
     secondsValue.textContent = "00";
     timerEl.style.backgroundColor = "#F00";
-    window.alert("Time's up!");
+    Notiflix.Notify.info("Time's up!");
     return;
   }
 
